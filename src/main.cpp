@@ -53,7 +53,7 @@ unsigned int nStakeMinAge = 24 * 60 * 60; // Analcoin - 24 hours
 unsigned int nStakeMaxAge = 30 * 24 * 60 * 60; // Analcoin - 30 days
 unsigned int nModifierInterval = 10 * 60; // Analcoin - time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 200;
+int nCoinbaseMaturity = 20;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
