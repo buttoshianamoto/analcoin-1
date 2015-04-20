@@ -79,6 +79,6 @@ cp *.h miniupnpc/
 Analcoin
 -------
 DOS prompt:
-cd \Testcoin\src
+cd \Analcoin\src
 mingw32-make -f makefile.mingw
-strip Testcoind.exe
+strip Analcoind.exe
