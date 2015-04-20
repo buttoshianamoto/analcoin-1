@@ -6,7 +6,7 @@ Analcoin
 What Is Analcoin? 
 ----------------------------
 
-Analcoin is a SHA256 Digital Currency, also referred to as a Cryptocurrency based on the Bitcoin Core. Digital Currencies are designed to replace the fiat (paper money) system and provide a way to securely transact units of wealth without using banks and third parties, to securely maintain a public consensue of transactions, and for allowing individuals and businesses to store their own wealth using their home computer, tablet, mobile phone and other digital devices.
+Analcoin is a SHA256 Digital Currency, also referred to as a Cryptocurrency based on the Bitcoin Core. Digital Currencies are designed to replace the fiat (paper money) system and provide a way to securely transact units of wealth without using banks and third parties, to securely maintain a public consensus of transactions, and for allowing individuals and businesses to store their own wealth using their home computer, tablet, mobile phone and other digital devices.
 
 Why Analcoin?
 --------------------------
