@@ -2983,7 +2983,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         if (!pfrom->fClient && !pfrom->fOneShot &&
             (pfrom->nStartingHeight > (nBestHeight - 144)) &&
             (pfrom->nVersion < NOBLKS_VERSION_START ||
-             pfrom->nVersion >= GetTime() < FORK_TIME ? NOBLKS_VERSION_END : NOBLKS_VERSION_END_FORK) &&
+             pfrom->nVersion >= (GetTime() < FORK_TIME ? NOBLKS_VERSION_END : NOBLKS_VERSION_END_FORK)) &&
              (nAskedForBlocks < 1 || vNodes.size() <= 1))
         {
             nAskedForBlocks++;
