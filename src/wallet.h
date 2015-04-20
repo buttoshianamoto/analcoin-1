@@ -94,6 +94,14 @@ public:
     typedef std::map<unsigned int, CMasterKey> MasterKeyMap;
     MasterKeyMap mapMasterKeys;
     unsigned int nMasterKeyMaxID;
+	
+	//MultiSend
+	std::vector<std::pair<std::string, int> > vMultiSend;
+	bool fMultiSend;
+	bool fMultiSendNotify;
+	std::string strMultiSendChangeAddress;
+	int nLastMultiSendHeight;
+	std::vector<std::string> vDisabledAddresses;
 
     CWallet()
     {
@@ -102,9 +110,16 @@ public:
     CWallet(std::string strWalletFileIn)
     {
         SetNull();
-
         strWalletFile = strWalletFileIn;
         fFileBacked = true;
+		
+		//MultiSend
+		vMultiSend.clear();
+		fMultiSend = false;
+		fMultiSendNotify = false;
+		strMultiSendChangeAddress = "";
+		nLastMultiSendHeight = 0;
+		vDisabledAddresses.clear();
     }
     void SetNull()
     {
@@ -115,6 +130,14 @@ public:
         pwalletdbEncryption = NULL;
         nOrderPosNext = 0;
         nTimeFirstKey = 0;
+		
+		//MultiSend
+		vMultiSend.clear();
+		fMultiSend = false;
+		fMultiSendNotify = false;
+		strMultiSendChangeAddress = "";
+		nLastMultiSendHeight = 0;
+		vDisabledAddresses.clear();
     }
 
     std::map<uint256, CWalletTx> mapWallet;
@@ -157,6 +180,7 @@ public:
 
     void GetKeyBirthTimes(std::map<CKeyID, int64_t> &mapKeyBirth) const;
 
+	bool MultiSend();
 
     /** Increment the next transaction order id
         @return next transaction order id
