@@ -1010,7 +1010,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, unsigned int nTim
 		nSubsidy = nCoinAge * COIN_YEAR_REWARD_2 / 365;
 	else
 	{
-		int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 25 / (365 * 25 + 8); //2.5% per year interest compounded everytime we stake
+		nSubsidy = nCoinAge * COIN_YEAR_REWARD * 25 / (365 * 25 + 8); //2.5% per year interest compounded everytime we stake
 		nSubsidy /= 100000000;
 		nSubsidy += 3; 
         if (nSubsidy < 10.010) nSubsidy = 0.010; 
